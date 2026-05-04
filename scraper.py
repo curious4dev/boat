@@ -40,7 +40,11 @@ def upload_json(path, data):
 # 出走表
 # =====================
 def parse_racelist(html, meta):
-    soup = BeautifulSoup(html, "lxml")
+    # 修正前:
+    # soup = BeautifulSoup(html, "lxml")
+    # 修正後:
+    soup = BeautifulSoup(html, "xml")
+
     table = soup.select_one(".is-w495")
     if not table:
         return []
@@ -76,7 +80,11 @@ def parse_racelist(html, meta):
 # 結果
 # =====================
 def parse_result(html, meta):
-    soup = BeautifulSoup(html, "lxml")
+    # 修正前:
+    # soup = BeautifulSoup(html, "lxml")
+    # 修正後:
+    soup = BeautifulSoup(html, "xml")
+
     table = soup.select_one(".is-w495")
     if not table:
         return []
@@ -108,7 +116,11 @@ def parse_result(html, meta):
 # オッズ
 # =====================
 def parse_odds(html, meta):
-    soup = BeautifulSoup(html, "lxml")
+    # 修正前:
+    # soup = BeautifulSoup(html, "lxml")
+    # 修正後:
+    soup = BeautifulSoup(html, "xml")
+
     rows = soup.select("tbody tr")
 
     out = []
