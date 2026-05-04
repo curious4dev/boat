@@ -7,7 +7,7 @@ from bs4 import BeautifulSoup
 from google.cloud import storage
 
 # ===== 設定 =====
-BUCKET_NAME = "boatrace-raw-xxx"
+BUCKET_NAME = "curious4dev_boat"
 
 BASE_RACELIST = "https://www.boatrace.jp/owpc/pc/race/racelist"
 BASE_RESULT   = "https://www.boatrace.jp/owpc/pc/race/raceresult"
